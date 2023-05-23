@@ -1,13 +1,22 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid bg-light">
+    <a class="navbar-brand" href="#">Wikinimous</a>
+    <%= link_to new_article_path do %>
+    <button>Post a new article</button>
+<% end %>
+  </div>
+</nav>
+
+<hr>
+
 <h1>All articles</h1>
 
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-    <%= link_to article.title, article_path(article) %>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to new_article_path do %>
-<button>Post a new article</button>
-<% end %>
+<div container>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+      <%= link_to article.title, article_path(article) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
