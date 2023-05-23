@@ -1,0 +1,17 @@
+<h2>
+<%= @article.title %>
+</h2>
+
+<p>
+<%= @article.content %>
+</p>
+
+<%= link_to edit_article_path(@article) do %>
+<button>Edit me!</button>
+<% end %>
+
+<%= link_to article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do
+%>
+<button>Delete me!</button>
+<% end %>
